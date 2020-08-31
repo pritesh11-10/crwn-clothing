@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import './form-input.scss'
+import './form-input.scss';
 
-//other pros = name, type, value of input tag in signin form
-const FormInput = ({handleChange, label, ...otherProps}) => (
-    <div className='group'>
-        <input className='form-input' onChange={handleChange} {...otherProps} />
-        {
-            label?
-            (<label className={`${otherProps.value.length? 'shrink':''} form-input-label`}>
-                {label}
-            </label>):
-            null
-        }
-    </div>
-)
+const FormInput = ({ handleChange, label, ...otherProps }) => (
+  <div className='group'>
+    <input className='form-input' onChange={handleChange} {...otherProps} />
+    {label ? (
+      <label
+        className={`${otherProps.value ? 'shrink' : ''} form-input-label`}>
+        {label}
+      </label>
+    ) : null}
+  </div>
+);
 
 export default FormInput;
